@@ -1,1 +1,2 @@
+require('./magic');
 require('./bootstrap');
