@@ -31,6 +31,63 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 30px;
 }
 
+.card {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.card .img-container {
+  display: block;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.post-card {
+  position: relative;
+  margin-bottom: 20px;
+  min-height: 350px;
+}
+.post-card h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+.post-card h2 a {
+  color: #424242;
+  transition: 0.3s ease all;
+}
+.post-card h2 a:hover {
+  color: red;
+  text-decoration: none;
+}
+.post-card .card-content {
+  padding: 20px;
+}
+.post-card .card-content .byline {
+  font-size: 12px;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+.post-card .card-content .price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  font-size: 14px;
+  padding: 3px 8px;
+  color: #fff;
+}
+.post-card .card-content .price-premium {
+  background: #f42e45;
+}
+.post-card .card-content .price-free {
+  background: #02bd70;
+}
+
 #site-header {
   background: #333;
 }
@@ -84,6 +141,25 @@ section .section-header h2::after {
   background: #333;
   color: #999;
   text-align: center;
+}
+
+.post-single {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.post-single .img-container {
+  height: 500px;
+}
+.post-single .card-content {
+  padding: 50px 100px;
+}
+.post-single .card-content h1 {
+  font-size: 50px;
+}
+.post-single .card-content .byline {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 20px;
 }
 
 body {

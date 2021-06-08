@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 // Site routes
 
 Route::get('/', 'App\Http\Controllers\SiteController@showHome');
-Route::get('{slug}', 'App\Http\Controllers\SiteController@showHome');
+Route::get('{slug}', 'App\Http\Controllers\SiteController@showPost');
 
 // Authentication routes
 

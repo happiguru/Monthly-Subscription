@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
 use App\Models\Post;
-use App\Models\User;
+// use App\Models\User;
 
 class SiteController extends Controller
 {
@@ -14,6 +15,7 @@ class SiteController extends Controller
     }
 
     public function showPost($slug){
-        return view('pages.post');
+        $post = Post::whereSlug($slug)->with('author')->first();
+        return view('pages.post', compact('post'));
     }
 }
