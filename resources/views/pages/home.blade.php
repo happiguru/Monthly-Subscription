@@ -19,6 +19,14 @@
             <h2>Latest Animals</h2>
         </div>
         {{-- Post will go here --}}
+
+        <div class="row">
+            @foreach($posts as $post)
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    @include('partials.post-card', ['post' => $post])
+                </div>
+            @endforeach
+        </div>
     </div>
 </section>
 
