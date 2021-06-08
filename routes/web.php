@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +12,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Site routes
+
+Route::get('/', 'App\Http\Controllers\SiteController@showHome');
+Route::get('{slug}', 'App\Http\Controllers\SiteController@showHome');
+
+// Authentication routes
+
+// Subscription routes
+
+
+// Account routes

@@ -24,15 +24,15 @@ class PostFactory extends Factory
      */
     public function definition()
     {
-        $title =$faker->realText(20);
-        $slug = str_slug($title, '-');
+        $title =$this->faker->realText(20);
+        $slug = Str::slug($title, '-');
 
         return [
-            'user_id' => function(){return factory(App\Models\User::class)->create()->id; },
+            'user_id' => \App\Models\User::factory()->create()->id,
             'title' => $title,
             'slug' => $slug,
-            'image' => $faker->imageUrl(1200, 600,'animals'),
-            'content' => $faker->paragraphs(10, true),
+            'image' => $this->faker->imageUrl(1200, 600,'animals'),
+            'content' => $this->faker->paragraphs(10, true),
             'premium' => rand(0, 1)
         ];
     }
