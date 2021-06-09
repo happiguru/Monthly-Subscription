@@ -24,7 +24,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Subscription routes
+Route::get('subscribe', 'App\Http\Controllers\SubscribeController@showSubscribe');
+Route::post('subscribe', 'App\Http\Controllers\SubscribeController@processSubscribe');
 
+// Single Post routes
+Route::get('{slug}', 'App\Http\Controllers\SiteController@showPost');
 
 // Account routes
-Route::get('{slug}', 'App\Http\Controllers\SiteController@showPost');
