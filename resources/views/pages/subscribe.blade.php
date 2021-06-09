@@ -68,6 +68,33 @@
             <div class="section-header">
                 <h2>Credit Card Info</h2>
             </div>
+            <div class="form-group row">
+            {{-- credit card number --}}
+                <div class='col-sm-8'>
+                    <label>Credit Card</label>
+                    <input type="text" class="form-control" placeholder="4242 4242 4242 4242">
+                </div>
+                {{-- credit card CVC --}}
+                <div class='col-sm-4'>
+                    <label>CVC</label>
+                    <input type="text" class="form-control" placeholder="123">
+                </div>
+            </div>
+            <div class="form-group row">
+            {{-- credit card expiration month --}}
+                <div class='col-sm-3'>
+                    <label>Expiration Month</label>
+                    <input type="text" class="form-control" placeholder="01">
+                </div>
+                {{-- credit card expiration year --}}
+                <div class='col-sm-3'>
+                    <label>Expiration Year</label>
+                    <input type="text" class="form-control" placeholder="2020">
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-md btn-block btn-success">Join</button>
+            </div>
     </div>
 </section>
 @endsection
